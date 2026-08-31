@@ -1,0 +1,38 @@
+{
+    "name": "@cherrystudio/plait-react-board",
+    "version": "0.93.4-cherry.0",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "scripts": {
+        "build": "vite build",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "peerDependencies": {
+        "react": ">=19 <20",
+        "react-dom": ">=19 <20"
+    },
+    "dependencies": {
+        "@cherrystudio/plait-react-text": "0.93.4-cherry.0",
+        "@plait/common": "0.93.4",
+        "@plait/core": "0.93.4",
+        "@plait/draw": "0.93.4",
+        "@plait/layouts": "0.93.4",
+        "@plait/mind": "0.93.4",
+        "@plait/text-plugins": "0.93.4",
+        "classnames": "^2.5.1",
+        "slate": "0.117.2",
+        "slate-dom": "0.117.4",
+        "slate-history": "0.115.0",
+        "slate-react": "0.117.2"
+    },
+    "license": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+    "name": "@cherrystudio/plait-react-text",
+    "version": "0.93.4-cherry.0",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "scripts": {
+        "build": "vite build",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "peerDependencies": {
+        "react": ">=19 <20",
+        "react-dom": ">=19 <20"
+    },
+    "dependencies": {
+        "@plait/common": "0.93.4",
+        "@plait/text-plugins": "0.93.4",
+        "is-hotkey": "^0.2.0",
+        "slate": "0.117.2",
+        "slate-dom": "0.117.4",
+        "slate-history": "0.115.0",
+        "slate-react": "0.117.2"
+    },
+    "license": "MIT"
+}

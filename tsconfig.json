@@ -13,7 +13,9 @@
             "@plait/draw": ["dist/draw"],
             "@plait/common": ["dist/common"],
             "@plait/text-plugins": ["dist/text-plugins"],
-            "@plait/graph-viz": ["dist/graph-viz"]
+            "@plait/graph-viz": ["dist/graph-viz"],
+            "@cherrystudio/plait-react-text": ["packages/react-text/src/index.ts"],
+            "@cherrystudio/plait-react-board": ["packages/react-board/src/index.ts"]
         },
         "outDir": "./dist/out-tsc",
         "esModuleInterop": true,

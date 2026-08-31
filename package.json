@@ -18,6 +18,7 @@
         "build:text-plugins": "ng build text-plugins",
         "build:demo": "ng build demo --configuration production",
         "build:graph-viz": "ng build graph-viz && cpx \"./packages/graph-viz/src/**/*.scss\" ./dist/graph-viz/",
+        "build:react": "npm run build -w @cherrystudio/plait-react-text && npm run build -w @cherrystudio/plait-react-board",
         "pub:core": "cd dist/core && npm publish --access public",
         "pub:text": "cd dist/text && npm publish --access public",
         "pub:mind": "cd dist/mind && npm publish --access public",
@@ -85,8 +86,11 @@
         "@docgeni/template": "2.7.0-next.2",
         "@types/is-hotkey": "^0.1.6",
         "@types/jasmine": "~3.8.0",
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
+        "@vitejs/plugin-react": "^4.7.0",
         "cpx": "^1.5.0",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^8.5.0",
@@ -100,6 +104,11 @@
         "ng-packagr": "^21.2.2",
         "prettier": "^2.0.0",
         "pretty-quick": "^1.10.0",
-        "typescript": "~5.9.3"
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "sass": "^1.77.8",
+        "typescript": "~5.9.3",
+        "vite": "^6.2.2",
+        "vite-plugin-dts": "^4.5.3"
     }
 }
