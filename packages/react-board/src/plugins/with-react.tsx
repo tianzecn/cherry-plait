@@ -1,4 +1,10 @@
-import { type PlaitTextBoard, type RenderComponentRef, type TextProps } from '@plait/common';
+import {
+    type ImageProps,
+    type PlaitImageBoard,
+    type PlaitTextBoard,
+    type RenderComponentRef,
+    type TextProps
+} from '@plait/common';
 import type { PlaitBoard } from '@plait/core';
 import { createRoot } from 'react-dom/client';
 import { Text, type CustomEditor } from '@cherrystudio/plait-react-text';
@@ -7,7 +13,7 @@ import { Node as SlateNode, Transforms } from 'slate';
 import type { ReactBoard } from './board';
 
 export const withReact = (board: PlaitBoard & PlaitTextBoard) => {
-    const newBoard = board as PlaitBoard & PlaitTextBoard & ReactBoard;
+    const newBoard = board as PlaitBoard & PlaitTextBoard & PlaitImageBoard & ReactBoard;
 
     newBoard.renderText = (container: Element | DocumentFragment, props: TextProps) => {
         const root = createRoot(container);
@@ -75,6 +81,28 @@ export const withReact = (board: PlaitBoard & PlaitTextBoard) => {
             }
         };
         return ref;
+    };
+
+    newBoard.renderImage = (container: Element | DocumentFragment, props: ImageProps) => {
+        const root = createRoot(container);
+        let current = { ...props };
+        const render = () =>
+            root.render(
+                <img
+                    src={current.imageItem.url}
+                    alt=""
+                    draggable={false}
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', pointerEvents: 'none' }}
+                />
+            );
+        render();
+        return {
+            destroy: () => setTimeout(() => root.unmount(), 0),
+            update: (updatedProps: Partial<ImageProps>) => {
+                current = { ...current, ...updatedProps };
+                render();
+            }
+        };
     };
 
     return newBoard;

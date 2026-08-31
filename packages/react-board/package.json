@@ -1,6 +1,6 @@
 {
     "name": "@cherrystudio/plait-react-board",
-    "version": "0.93.4-cherry.3",
+    "version": "0.93.4-cherry.4",
     "type": "module",
     "files": [
         "dist"
