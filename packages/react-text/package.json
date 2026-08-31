@@ -1,6 +1,6 @@
 {
     "name": "@cherrystudio/plait-react-text",
-    "version": "0.93.4-cherry.0",
+    "version": "0.93.4-cherry.1",
     "type": "module",
     "files": [
         "dist"
