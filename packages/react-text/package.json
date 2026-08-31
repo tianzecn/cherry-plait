@@ -1,6 +1,6 @@
 {
     "name": "@cherrystudio/plait-react-text",
-    "version": "0.93.4-cherry.2",
+    "version": "0.93.4-cherry.3",
     "type": "module",
     "files": [
         "dist"
@@ -10,7 +10,8 @@
             "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
-        }
+        },
+        "./style.css": "./dist/index.css"
     },
     "scripts": {
         "build": "vite build",
