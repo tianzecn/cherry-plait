@@ -1,6 +1,6 @@
 {
     "name": "@cherrystudio/plait-react-board",
-    "version": "0.93.4-cherry.1",
+    "version": "0.93.4-cherry.2",
     "type": "module",
     "files": [
         "dist"
@@ -17,11 +17,11 @@
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "peerDependencies": {
+        "@cherrystudio/plait-react-text": "0.93.4-cherry.2",
         "react": ">=19 <20",
         "react-dom": ">=19 <20"
     },
     "dependencies": {
-        "@cherrystudio/plait-react-text": "https://github.com/tianzecn/cherry-plait/releases/download/v0.93.4-cherry.1/cherrystudio-plait-react-text-0.93.4-cherry.1.tgz",
         "@plait/common": "0.93.4",
         "@plait/core": "0.93.4",
         "@plait/draw": "0.93.4",
